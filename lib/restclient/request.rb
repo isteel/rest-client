@@ -81,6 +81,13 @@ module RestClient
 					key = parent_key ? "#{parent_key}[#{k}]" : k
 					if p[k].is_a? Hash
 						process_payload(p[k], key)
+          elsif p[k].is_a? Array
+            ret=[]
+            p[k].each do |e|
+              value = URI.escape(e.to_s, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
+              ret << "#{key}[]=#{value}"
+            end
+            ret.join("&")
 					else
 						value = URI.escape(p[k].to_s, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
 						"#{key}=#{value}"

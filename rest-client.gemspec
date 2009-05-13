@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
     s.name = "rest-client"
-    s.version = "0.9.2"
+    s.version = "0.9.3.1"
     s.summary = "Simple REST client for Ruby, inspired by microframework syntax for specifying actions."
     s.description = "A simple REST client for Ruby, inspired by the Sinatra microframework style of specifying actions: get, put, post, delete."
-    s.author = "Adam Wiggins"
-    s.email = "adam@heroku.com"
+    s.author = "Ian Steel"
+    s.email = "ian@bilstone.co.uk"
     s.rubyforge_project = "rest-client"
     s.homepage = "http://rest-client.heroku.com/"
     s.has_rdoc = true
